@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/SCORE1387/company-website.svg?branch=master)](https://travis-ci.org/SCORE1387/company-website)
+[![Code Climate](https://codeclimate.com/github/SCORE1387/company-website/badges/gpa.svg)](https://codeclimate.com/github/SCORE1387/company-website)
 
 # Site Template Application
 
