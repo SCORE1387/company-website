@@ -2,40 +2,16 @@
 
 angular.module('services').component('services', {
     templateUrl: "services/services.template.html",
-    controller: function ServicesController() {
+    controller: ['$http', function ServicesController($http) {
         var self = this;
 
-        self.services = [
-            {
-                name: "POWER",
-                description: "Lorem ipsum dolor sit amet..",
-                imgClass: "glyphicon-off"
+        $http.get('services/services.json').then(
+            function successCallback(response) {
+                self.services = response.data;
             },
-            {
-                name: "LOVE",
-                description: "Lorem ipsum dolor sit amet..",
-                imgClass: "glyphicon-heart"
-            },
-            {
-                name: "POWER",
-                description: "Lorem ipsum dolor sit amet..",
-                imgClass: "glyphicon-lock"
-            },
-            {
-                name: "GREEN",
-                description: "Lorem ipsum dolor sit amet..",
-                imgClass: "glyphicon-leaf"
-            },
-            {
-                name: "CERTIFIED",
-                description: "Lorem ipsum dolor sit amet..",
-                imgClass: "glyphicon-certificate"
-            },
-            {
-                name: "HARD WORK",
-                description: "Lorem ipsum dolor sit amet..",
-                imgClass: "glyphicon-wrench"
-            },
-        ];
-    }
+            function failCallback(response) {
+                console.log('Error retrieving services data.');
+            }
+        );
+    }]
 });

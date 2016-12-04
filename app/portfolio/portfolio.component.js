@@ -2,25 +2,16 @@
 
 angular.module('portfolio').component('portfolio', {
     templateUrl: "portfolio/portfolio.template.html",
-    controller: function PortfolioController() {
+    controller: ['$http', function PortfolioController($http) {
         var self = this;
 
-        self.portfolioItems = [
-            {
-                name: "Paris",
-                description: "Yes, we built Paris",
-                imgUrl: "img/paris.jpg"
+        $http.get('portfolio/portfolio.json').then(
+            function successCallback(response) {
+                self.portfolioItems = response.data;
             },
-            {
-                name: "New York",
-                description: "We built New York",
-                imgUrl: "img/newyork.jpg"
-            },
-            {
-                name: "San Francisco",
-                description: "Yes, San Fran is ours",
-                imgUrl: "img/sanfran.jpg"
+            function failCallback(response) {
+                console.log('Error retrieving portfolio data.');
             }
-        ];
-    }
+        );
+    }]
 });
