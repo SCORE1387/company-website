@@ -1,0 +1,29 @@
+<div id="customer-say-carousel" class="carousel slide text-center" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#customer-say-carousel" data-slide-to="$index"
+            ng-class="{active: $index == 0}" ng-repeat="quote in $ctrl.customerQuotes">
+        </li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+        <div class="item" ng-class="{active: $index == 0}" ng-repeat="quote in $ctrl.customerQuotes">
+            <h4>
+                <em>{{quote.quote}}</em>
+                <br>
+                {{quote.author}}
+            </h4>
+        </div>
+    </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#customer-say-carousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#customer-say-carousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
