@@ -6,3 +6,6 @@ before_script:
   - sh -e /etc/init.d/xvfb start
 notifications:
   email: false
+addons:
+  code_climate:
+    repo_token: c5f39cc6a2a97e98b3f31b0b4d7705495de03035f6c7874e3d8d75795ef0423d
