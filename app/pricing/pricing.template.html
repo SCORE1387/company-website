@@ -1,0 +1,24 @@
+<div class="row slideanim">
+    <div ng-repeat="pricingItem in $ctrl.pricingItems">
+        <div class="clearfix" ng-if="$index % 3 == 0"></div>
+        <div class="col-sm-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h1>{{pricingItem.name}}</h1>
+                </div>
+                <div class="panel-body">
+                    <p><strong>{{pricingItem.lorem}}</strong> Lorem</p>
+                    <p><strong>{{pricingItem.ipsum}}</strong> Ipsum</p>
+                    <p><strong>{{pricingItem.dolor}}</strong> Dolor</p>
+                    <p><strong>{{pricingItem.sit}}</strong> Sit</p>
+                    <p><strong>{{pricingItem.amet}}</strong> Amet</p>
+                </div>
+                <div class="panel-footer">
+                    <h3>{{pricingItem.price | currency}}</h3>
+                    <p class="small">per month</p>
+                    <button class="btn btn-lg" ng-click="$ctrl.signUp(pricingItem.name)">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
