@@ -10,6 +10,8 @@
     "angular-mocks": "1.5.x",
     "angular-route": "1.5.x",
     "angular-resource": "1.5.x",
-    "bootstrap": "3.3.x"
+    "bootstrap": "3.3.x",
+    "html5shiv": "3.7.0",
+    "respond": "1.4.2"
   }
 }

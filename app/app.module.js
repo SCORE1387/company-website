@@ -1,10 +1,13 @@
 'use strict';
 
 // Define the `siteTemplateApp` module
-angular.module('siteTemplateApp', [
+angular.module('companySiteApp', [
     'ngRoute',
     'ngResource',
-    'shared',
-    'itemDetail',
-    'itemList'
+    // 'shared',
+    // 'itemDetail',
+    // 'itemList',
+
+    'subscribeForm',
+    'portfolio'
 ]);

@@ -1,0 +1,6 @@
+<form name="subscribeForm" class="form-inline" role="form">
+    <div class="form-group">
+        <input type="email" required ng-model="$ctrl.email" placeholder="Email address:" class="form-control" id="email" name="email" size="50px">
+    </div>
+    <button type="submit" ng-disabled="subscribeForm.$invalid" class="btn btn-danger" ng-click="$ctrl.subscribe()">Subscribe</button>
+</form>

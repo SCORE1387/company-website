@@ -1,0 +1,14 @@
+<div class="row">
+    <div ng-repeat="portfolioItem in $ctrl.portfolioItems">
+        <div class="clearfix" ng-if="$index % 3 == 0"></div>
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <img class="img-responsive full-width" ng-src="{{portfolioItem.imgUrl}}" alt="Paris">
+                <div class="caption">
+                    <p><strong>{{portfolioItem.name}}</strong></p>
+                    <p>{{portfolioItem.description}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
