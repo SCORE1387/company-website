@@ -2,17 +2,8 @@
 
 angular.
   module('companySiteApp').
-  config(['$locationProvider' ,'$routeProvider',
-    function config($locationProvider, $routeProvider) {
+  config(['$locationProvider',
+    function config($locationProvider) {
       $locationProvider.hashPrefix('!');
-
-/*      $routeProvider.
-        when('/items', {
-          template: '<item-list></item-list>'
-        }).
-        when('/items/:itemId', {
-          template: '<item-detail></item-detail>'
-        }).
-        otherwise('/items');*/
     }
   ]);
