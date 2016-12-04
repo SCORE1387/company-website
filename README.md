@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/SCORE1387/company-website.svg?branch=master)](https://travis-ci.org/SCORE1387/company-website)
+
 # Site Template Application
 
 
