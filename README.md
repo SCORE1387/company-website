@@ -87,6 +87,15 @@ the [Java Development Kit (JDK)][jdk] to be installed on your local machine. Che
 
 If JDK is not already installed, you can download it [here][jdk-download].
 
+## Docker
+
+Build an image:
+`docker build -t sekolq/company-website .`
+
+And run it
+`docker run -p 8000:8000 sekolq/company-website`
+
+Now you can access application on [localhost:8000][docker-url].
 
 ## Application Directory Layout
 
@@ -135,3 +144,4 @@ For more information on AngularJS, please check out https://angularjs.org/.
 [node]: https://nodejs.org/
 [protractor]: http://www.protractortest.org/
 [selenium]: http://docs.seleniumhq.org/
+[docker-url]: http://localhost:8000/
