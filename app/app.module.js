@@ -4,10 +4,7 @@
 angular.module('companySiteApp', [
     'ngRoute',
     'ngResource',
-    // 'shared',
-    // 'itemDetail',
-    // 'itemList',
-
+    'shared',
     'subscribeForm',
     'portfolio',
     'customerQuotes',

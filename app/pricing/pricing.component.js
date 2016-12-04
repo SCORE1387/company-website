@@ -11,7 +11,7 @@ angular.module('pricing').component('pricing', {
 
         self.pricingItems = [
             {
-                name: "Basic",
+                name: "basic",
                 lorem: 20,
                 ipsum: 15,
                 dolor: 5,
@@ -20,7 +20,7 @@ angular.module('pricing').component('pricing', {
                 price: 19
             },
             {
-                name: "Pro",
+                name: "pro",
                 lorem: 50,
                 ipsum: 25,
                 dolor: 10,
@@ -29,7 +29,7 @@ angular.module('pricing').component('pricing', {
                 price: 29
             },
             {
-                name: "Premium",
+                name: "premium",
                 lorem: 100,
                 ipsum: 50,
                 dolor: 25,

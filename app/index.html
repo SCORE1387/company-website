@@ -1,11 +1,25 @@
-<!doctype html>
-<html lang="en" ng-app="siteTemplateApp">
-  <head>
-    <meta charset="utf-8">
-      <title>Site Template App</title>
+<!DOCTYPE html>
+<html lang="en" ng-app="companySiteApp">
 
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-    <link rel="stylesheet" href="app.css" />
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Company Web Site</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <link href="css/company.css" rel="stylesheet">
+
+    <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
 
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
@@ -13,17 +27,200 @@
     <script src="app.module.js"></script>
     <script src="app.config.js"></script>
     <script src="shared/shared.module.js"></script>
-    <script src="shared/item/item.module.js"></script>
-    <script src="shared/item/item.service.js"></script>
-    <script src="shared/checkmark/checkmark.filter.js"></script>
-    <script src="item-list/item-list.module.js"></script>
-    <script src="item-list/item-list.component.js"></script>
-    <script src="item-detail/item-detail.module.js"></script>
-    <script src="item-detail/item-detail.component.js"></script>
-  </head>
-  <body>
+    <script src="shared/filters/capitalize-first-letter.filter.js"></script>
+    <script src="subscribe-form/subscribe-form.module.js"></script>
+    <script src="subscribe-form/subscribe-form.component.js"></script>
+    <script src="services/services.module.js"></script>
+    <script src="services/services.component.js"></script>
+    <script src="portfolio/portfolio.module.js"></script>
+    <script src="portfolio/portfolio.component.js"></script>
+    <script src="pricing/pricing.module.js"></script>
+    <script src="pricing/pricing.component.js"></script>
+    <script src="customer-quotes/customer-quotes.module.js"></script>
+    <script src="customer-quotes/customer-quotes.component.js"></script>
+    <script src="contact-form/contact-form.module.js"></script>
+    <script src="contact-form/contact-form.component.js"></script>
+    <script src="map/map.module.js"></script>
+    <script src="map/map.controller.js"></script>
 
-    <div ng-view></div>
 
-  </body>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="bower_components/html5shiv/dist/html5shiv.js"></script>
+    <script src="bower_components/respond/dest/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body id="page" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Logo</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#services">SERVICES</a></li>
+                <li><a href="#portfolio">PORTFOLIO</a></li>
+                <li><a href="#pricing">PRICING</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="jumbotron text-center">
+    <h1>Company</h1>
+    <p>We specialize in blablabla</p>
+    <subscribe-form></subscribe-form>
+</div>
+
+<div id="about" class="container-fluid about-block">
+    <div class="row">
+        <div class="col-sm-8">
+            <h2>About company page</h2>
+            <br>
+            <h4>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </h4>
+            <br>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <br>
+            <button class="btn btn-lg btn-default">Get in Touch</button>
+        </div>
+        <div class="col-sm-4">
+            <span class="glyphicon glyphicon-signal logo slideanim" aria-hidden="true"></span>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid our-values-block">
+    <div class="row">
+        <div class="col-sm-4">
+            <span class="glyphicon glyphicon-globe logo slideanim" aria-hidden="true"></span>
+        </div>
+        <div class="col-sm-8">
+            <h2>Our values</h2>
+            <br>
+            <h4>
+                <strong>MISSION:</strong> Our mission lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </h4>
+            <br>
+            <p>
+                <strong>VISION:</strong> Our vision Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+        </div>
+    </div>
+</div>
+
+<div id="services" class="container-fluid services-block">
+    <h2>Services</h2>
+    <h4>What we offer</h4>
+    <services></services>
+</div>
+
+<div id="portfolio" class="container-fluid portfolio-block">
+    <h2>Portfolio</h2>
+    <h4>What we have created</h4>
+    <portfolio></portfolio>
+
+    <br>
+
+    <h2>What our customers say</h2>
+    <customer-quotes></customer-quotes>
+</div>
+
+<div id="pricing" class="container-fluid pricing-block">
+    <h2>Pricing</h2>
+    <h4>Choose a payment plan that works for you</h4>
+    <pricing></pricing>
+</div>
+
+<div id="contact" class="container-fluid contact-block">
+    <h2>Contact</h2>
+    <div class="row">
+        <div class="col-sm-5 text-left">
+            <p>Contact us and we'll get back to you within 24 hours.</p>
+            <p><span class="glyphicon glyphicon-map-marker"></span> Chicago, US</p>
+            <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
+            <p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p>
+        </div>
+        <div class="col-sm-7">
+            <contact-form></contact-form>
+        </div>
+    </div>
+</div>
+
+<!-- Set height and width with CSS -->
+<div id="googleMap" ng-controller="MapController"></div>
+
+<footer class="container-fluid text-center">
+    <a href="#page" title="To Top"><span class="glyphicon glyphicon-chevron-up btn-up"></span></a>
+    <p>Bootstrap Theme Made By <a href="http://www.w3schools.com/">www.w3schools.com</a></p>
+</footer>
+
+<script>
+    $(document).ready(function () {
+        // Add smooth scrolling to all links in navbar + footer link
+        $(".navbar a, footer a[href='#page']").on('click', function (event) {
+
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 900, function () {
+
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+            });
+        });
+        $(window).scroll(function () {
+            $(".slideanim").each(function () {
+                var pos = $(this).offset().top;
+
+                var winTop = $(window).scrollTop();
+                if (pos < winTop + 800) {
+                    $(this).addClass("slide");
+                }
+            });
+        });
+    })
+</script>
+
+</body>
 </html>
