@@ -12,5 +12,6 @@ angular.module('companySiteApp', [
     'portfolio',
     'customerQuotes',
     'services',
-    'pricing'
+    'pricing',
+    'contactForm'
 ]);
