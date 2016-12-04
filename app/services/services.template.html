@@ -1,0 +1,11 @@
+<div class="row slideanim">
+    <div ng-repeat="service in $ctrl.services">
+        <div class="clearfix" ng-if="$index % 3 == 0"></div>
+        <br ng-if="$index % 3 == 0">
+        <div class="col-sm-4">
+            <span class="glyphicon logo-small" ng-class="service.imgClass"></span>
+            <h4>{{service.name}}</h4>
+            <p>{{service.description}}</p>
+        </div>
+    </div>
+</div>

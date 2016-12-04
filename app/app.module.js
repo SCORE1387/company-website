@@ -10,5 +10,6 @@ angular.module('companySiteApp', [
 
     'subscribeForm',
     'portfolio',
-    'customerQuotes'
+    'customerQuotes',
+    'services'
 ]);
