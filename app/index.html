@@ -54,27 +54,7 @@
 
 <body id="page" data-spy="scroll" data-target=".navbar" data-offset="60">
 
-<nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Logo</a>
-        </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#about">ABOUT</a></li>
-                <li><a href="#services">SERVICES</a></li>
-                <li><a href="#portfolio">PORTFOLIO</a></li>
-                <li><a href="#pricing">PRICING</a></li>
-                <li><a href="#contact">CONTACT</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
+<div ng-include="'navbar/navbar.template.html'"></div>
 
 <div class="jumbotron text-center">
     <h1>Company</h1>
@@ -82,65 +62,9 @@
     <subscribe-form></subscribe-form>
 </div>
 
-<div id="about" class="container-fluid about-block">
-    <div class="row">
-        <div class="col-sm-8">
-            <h2>About company page</h2>
-            <br>
-            <h4>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </h4>
-            <br>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </p>
-            <br>
-            <button class="btn btn-lg btn-default">Get in Touch</button>
-        </div>
-        <div class="col-sm-4">
-            <span class="glyphicon glyphicon-signal logo slideanim" aria-hidden="true"></span>
-        </div>
-    </div>
-</div>
+<div ng-include="'about/about.template.html'" id="about" class="container-fluid about-block"></div>
 
-<div class="container-fluid our-values-block">
-    <div class="row">
-        <div class="col-sm-4">
-            <span class="glyphicon glyphicon-globe logo slideanim" aria-hidden="true"></span>
-        </div>
-        <div class="col-sm-8">
-            <h2>Our values</h2>
-            <br>
-            <h4>
-                <strong>MISSION:</strong> Our mission lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </h4>
-            <br>
-            <p>
-                <strong>VISION:</strong> Our vision Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </p>
-        </div>
-    </div>
-</div>
+<div ng-include="'our-values/our-values.template.html'" class="container-fluid our-values-block"></div>
 
 <div id="services" class="container-fluid services-block">
     <h2>Services</h2>
